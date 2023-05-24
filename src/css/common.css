@@ -22,3 +22,13 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+/* CSS for TASK-03 */
+.gallery {
+  display: flex;
+  gap: 10px;
+}
+/* CSS for TASK-03 */
+.item-gallery {
+  list-style: none;
+}
