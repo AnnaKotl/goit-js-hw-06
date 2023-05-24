@@ -7,16 +7,16 @@ const ingredients = [
   'Condiments',
 ];
 
-// const listOfIngredients = document.querySelector('#ingredients');
+const listOfIngredients = document.querySelector('#ingredients');
 
-// const makeIngredientsItems = ingredient => {
-//   return ingredient.map(ingredient => {
-//     ingredients.forEach(ingredient => {
-//       const item = document.createElement('li');
-//       item.textContent = ingredient;
-//       item.classList.add('item');
-//       listOfIngredients.appendChild(item);
-//     });
-//   });
-// };
-// document.body.appendChild(listOfIngredients);
+const makeIngredientsItems = elements => {
+  return elements.map(element => {
+    const itemElements = document.createElement('li');
+    itemElements.textContent = element;
+    itemElements.classList.add('item');
+    return itemElements;
+  });
+};
+
+const itemIngrediens = makeIngredientsItems(ingredients);
+listOfIngredients.append(...itemIngrediens);
