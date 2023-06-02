@@ -22,3 +22,7 @@ const makeGallery = ({ url, alt }) => {
 const imagesList = images.map(makeGallery).join('');
 
 listOfGallery.insertAdjacentHTML('beforeend', imagesList);
+
+listOfGallery.style.display = 'flex';
+listOfGallery.style.gap = '10px';
+listOfGallery.style.listStyle = 'none';
