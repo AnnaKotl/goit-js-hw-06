@@ -8,6 +8,17 @@ destroyBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
   const amount = Number(input.value);
+
+  if (amount > 100) {
+    alert('Max is 100!');
+    return;
+  };
+
+  if (amount <= 0) {
+    alert('Min is 1!');
+    return;
+  }
+
   const boxes = [];
 
   for (let i = 0; i < amount; i++) {
@@ -22,15 +33,15 @@ function createBoxes() {
   }
 
   boxesContainer.append(...boxes);
-  
-}
+
+};
 
 function destroyBoxes() {
   boxesContainer.innerHTML = '';
-}
+};
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
-}
+};
